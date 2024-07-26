@@ -9,14 +9,15 @@
 <body class="bg-gray-100">
     <div class="flex items-center justify-center min-h-screen">
         <div class="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden mb-4">
-            <img src="https://placehold.co/1200x800/eeeeee/4B5563/png?text=Title+image" alt="Similarity Analytics" class="w-full h-64 object-cover object-center">
+            <img src="assets/images/title.png" alt="Similarity Analytics" class="w-full h-64 object-cover object-center">
             <div class="p-6">
                 <h2 class="text-xl font-bold text-gray-900">Similarity Analytics Web Service</h2>
                 <p class="text-sm text-gray-600">Discover visually similar images with our advanced analytics tool.</p>
                 <div class="flex items-center justify-between mt-4">
-                    <a href="#" class="text-blue-600 hover:underline">Learn more</a>
-                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 rounded-lg px-4 py-2 text-sm"><b>Get Started</b><br>Input your image!</button>
+                    <a href="https://github.com/This-is-That/poster-copycatch" class="text-blue-600 hover:underline">Learn more</a>
+                    <button id="getStartedBtn" type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 rounded-lg px-4 py-2 text-sm"><b>Get Started</b><br>Input your image!</button>
                 </div>
+                <input type="file" id="fileInput" class="hidden" accept="image/*">
             </div>
         </div>
     </div>
@@ -47,5 +48,10 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('getStartedBtn').addEventListener('click', function() {
+            document.getElementById('fileInput').click();
+        });
+    </script>
 </body>
 </html>
